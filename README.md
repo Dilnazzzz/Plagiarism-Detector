@@ -1,1 +1,3 @@
-# Plagiarism-Detector-
+# Plagiarism Detector
+
+Each student submission is a string that is a result of concatenating all the words there (i.e., white spaces are removed). Let X and Y be two student submission strings. I found all the common substrings of length k (known as k-gram) of the two strings. In other words, determine all (i,j) where X[i:i+k]=Y[j:j+k]. In other words, I stored all length-k substrings of X into a hash table TX with the hash values computed by using rolling hashing. Then for each substring sy in Y, I computed the hash value h(sy) using rolling hashing, and used this hash value to look up sy in table TX. If the lookup is successful, then we have a common substring.
